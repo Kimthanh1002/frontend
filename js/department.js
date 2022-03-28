@@ -1,20 +1,21 @@
 $(function () {
   if (!isLogin()) {
-    window.location.replace("http://127.0.0.1:5500/html/login.html");
+    // window.location.replace("http://127.0.0.1:5500/html/login.html");
+    window.location.href = 'login.html'
   }
 
-  $(".header").load("header.html", function () {
+  $(".header").load("html/header.html", function () {
     document.getElementById("fullname").innerHTML =
       storage.getItem("FULL_NAME");
   });
-  $(".main").load("home.html");
-  $(".footer").load("footer.html");
+  $(".main").load("html/home.html");
+  $(".footer").load("html/footer.html");
 });
 
 var roleUser = storage.getItem("ROLE");
 
 function isLogin() {
-  if (storage.getItem("ID")) {
+  if (storage.getItem("token")) {
     return true;
   }
   return false;
@@ -27,20 +28,24 @@ function logout() {
     storage.removeItem("USERNAME");
     storage.removeItem("PASSWORD");
     storage.removeItem("ROLE");
+    storage.removeItem("token");
+
 
     // redirect to login page
-    window.location.replace("http://127.0.0.1:5500/html/login.html");
+    // window.location.replace("http://127.0.0.1:5500/html/login.html");
+    window.location.href = 'login.html'
+
   }
 }
 
 function clickNavHome() {
-  $(".main").load("home.html");
+  $(".main").load("html/home.html");
   $("#canNotGetDepartment").modal("hide");
   $("#canNotGetAccount").modal("hide");
 }
 
 function clickNavViewListDepartments() {
-  $(".main").load("viewlistdepartments.html", function () {
+  $(".main").load("html/viewlistdepartments.html", function () {
     if (roleUser == "EMPLOYEE") {
       $("#canNotGetDepartment").modal("show");
     } else {
