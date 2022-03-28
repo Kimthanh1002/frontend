@@ -22,33 +22,29 @@
 
 </head>
 <body>
+    <div class="imgcontainer">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <img src="https://www.w3schools.com/howto/img_avatar2.png" height="500px" width="auto" alt="Avatar" class="avatar">
+      </div>
+  
+      <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" id="username" name="username" required>
+  
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" id="password" name="password" required>
+        
+        <p style="color: red;" id="nameErrorMessage"></p>
 
-      <div class="login-box">
-        <span style="color: rgb(46, 184, 64);" onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-        <h2>Login</h2>
-        <form>
-          <div class="user-box">
-            <input type="text"  id="username" name="username" required ="">
-            <label >Username</label>
-          </div>
-          <div class="user-box">
-            <input type="password" id="password" name="password" required ="">
-            <label>Password</label>
-          </div>
-          <p style="color: red;" id="nameErrorMessage"></p>          <label>
-            <input type="checkbox" id="rememberMe" name="rememberMe"> Remember me
-          </label>
-        </br>
-
-          <a href="#"  >
-            <span> </span>
-            <span></span>
-            <span></span>
-            <span></span>
-           <p  onclick="login()"> Submit</p> 
-          </a>
-          <span class="psw"> <a th:href="/##">Forgot your password?</a> </span>
-        </form>
+        <button onclick="login()">Login</button>
+        <label>
+          <input type="checkbox" id="rememberMe" name="rememberMe"> Remember me
+        </label>
+      </div>
+  
+      <div class="container" style="background-color:#f1f1f1">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <span class="psw">Forgot <a href="#">password?</a></span>
       </div>
 </body>
 

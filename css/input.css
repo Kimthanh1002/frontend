@@ -88,13 +88,6 @@ input#input-search-department:focus,input#input-search-account:focus {
   border-radius: 10px;
 
 }
-#depRefresh:hover,#accountRefresh:hover{
-  background-color: rgba(66, 153, 224, 0.8);
-  color:#fff
-}
-#navbar a{
-  border-radius: 3%;
-  }
 
 
 

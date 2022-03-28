@@ -211,7 +211,7 @@ function updateUser() {
             hideUserModal();
             showUserSuccessAlert();
             fillUserInfor();
-            alert("Thay đổi mật khẩu thành công,để không phát sinh lỗi trong quá trình sử dụng hãy đăng nhập lại")
+            alert("Thay đổi mật khẩu thành công, bạn cần đăng nhập lại.")
             logout();
 
             // // upDate name

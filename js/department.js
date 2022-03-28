@@ -324,8 +324,9 @@ function resetSearch() {
   document.getElementById("input-search-department").value = "";
 }
 
-
+// https://www.w3schools.com/howto/howto_js_trigger_button_enter.asp
 function handKeyUpEventForSearching(event) {
+  // Number 13 is the "Enter" key on the keyboard
   if (event.keyCode === 13) {
     event.preventDefault();
     handleSearch();

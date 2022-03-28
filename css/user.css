@@ -8,10 +8,10 @@
 #divTableInfo button{
     float:right;
     margin:5% 5% 2% 0%;
-    width:12%; 
+    width:10%; 
     border:  1px solid rgb(127, 211, 245,0.7); 
     background-color: rgba(14, 110, 78, 0.7);
-    text-align: center;
+
     color:  #fff;
     border-radius: 10%;
 }
