@@ -15,7 +15,7 @@ $(function () {
 var roleUser = storage.getItem("ROLE");
 
 function isLogin() {
-  if (storage.getItem("token")) {
+  if (storage.getItem("ID")) {
     return true;
   }
   return false;
